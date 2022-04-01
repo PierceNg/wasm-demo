@@ -1,29 +1,40 @@
-const memory = new WebAssembly.Memory({initial: 256, maximum: 256});
-const env = {'memory': memory};
-const importObject = {env};
+const importObject = {
+    memory: new WebAssembly.Memory({initial: 256, maximum: 256}),
+    wasi_snapshot_preview1: {
+      path_readlink() { },
+      fd_fdstat_get() { },
+      fd_close() { },
+      fd_write() { },
+      fd_read() { },
+      fd_tell() { },
+      fd_filestat_get() { },
+      path_open() { },
+      proc_exit() { },
+      fd_prestat_get() { },
+      fd_prestat_dir_name() { },
+      environ_sizes_get() { },
+      environ_get() { },
+    }
+};
 
-
-fetch('../out/main.wasm').then(response =>
+fetch('/lyff.wasm').then(response =>
   response.arrayBuffer()
 ).then(bytes => WebAssembly.instantiate(bytes, importObject)).then(results => {
   instance = results.instance;
   exports = instance.exports;
-  
+
   exports._board_init();  // setup lyff board
-  //debugger;
-  draw();
- 
-  canvas.onclick = (ev) => {
+
+  setInterval(() => {
     exports._board_step();
     draw();
-  };
- 
+  }, 100);
 }).catch(console.error);
 
 
 function getBoardBuffer() {
-  return new Uint8Array(memory.buffer, exports._board_ref());
-} 
+  return new Uint8Array(exports.memory.buffer, exports._board_ref());
+}
 
 function draw() {
   const buffer = getBoardBuffer();
