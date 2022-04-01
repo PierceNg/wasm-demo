@@ -17,11 +17,11 @@ library lyff;
  * the License.
  *}
 
-const 
+const
   DIM = 100;
   SIZE = ((DIM + 2) * (DIM + 2) div 8);  // byte size
 
-var 
+var
   boardA : array [0..SIZE-1] of byte;
   boardB : array [0..SIZE-1] of byte;
   board  : PByte = @boardA;
@@ -54,10 +54,10 @@ end;
 
 // Clears a board.
 procedure clear_board_ref(b: PByte);
-var 
+var
   i : integer;
 begin
-  for i := 0 to SIZE-1 do   
+  for i := 0 to SIZE-1 do
     b[i] := 0;
 end;
 
@@ -73,7 +73,7 @@ var
   count  : integer;
   off    : integer;
   dx, dy : integer;
-  x,y    : integer; 
+  x,y    : integer;
 begin
   total_alive := 0;
   change := 0;
@@ -85,7 +85,7 @@ begin
 
   clear_board_ref(next);
 
-  for x := 1 to DIM - 1 do begin 
+  for x := 1 to DIM - 1 do begin
     for y := 1 to DIM - 1 do begin
       alive := get_cell(x, y);
       out_ := 0;
@@ -156,7 +156,7 @@ begin
   board[120] := 255;
   board[132] := 255;
   board[800] := 255;
-  board[720] := 254;
+  board[720] := 255;
   board[700] := 255;
   board[600] := 255;
   board[601] := 255;
@@ -173,3 +173,4 @@ exports
   board_step name '_board_step';
 
 end.
+
