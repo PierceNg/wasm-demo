@@ -12,7 +12,6 @@ included in this repo. Just use a local web server to publish the content
 of ```htdocs``` say by using a Python 1-liner. You could also just compile
 ```webserver.lpr``` in this directory and run it.
 
-
 To hack WebAssembly with Pascal, you need FPC for WebAssembly. To set up FPC for
 WebAssembly, see [top-level README](/README.md).
 
@@ -38,6 +37,42 @@ Run it:
 
 ```
 % ./linrun.sh
+Visit localhost:8000 with your web server.
+```
+
+### macOS
+
+Tested on macOS Catalina. The WebAssembly binary ```lyff.wasm``` is already
+included in this repo. Just use a local web server to publish the content
+of ```htdocs``` say by using a Python 1-liner. You could also just compile
+```webserver.lpr``` in this directory and run it.
+
+To hack WebAssembly with Pascal, you need FPC for WebAssembly. To set up FPC for
+WebAssembly, see [top-level README](/README.md).
+
+Build it:
+
+```
+% ./macbuild.sh
+Free Pascal Compiler version 3.2.2 [2022/02/21] for x86_64
+Copyright (c) 1993-2021 by Florian Klaempfl and others
+Target OS: Darwin for x86_64
+Compiling webserver.lpr
+Assembling webserver
+Linking webserver
+22 lines compiled, 1.3 sec
+Free Pascal Compiler version 3.3.1 [2022/03/31] for wasm32
+Copyright (c) 1993-2022 by Florian Klaempfl and others
+Target OS: The WebAssembly System Interface (WASI)
+Compiling lyff.pas
+Linking lyff.wasm
+176 lines compiled, 0.1 sec
+```
+
+Run it:
+
+```
+% ./macrun.sh
 Visit localhost:8000 with your web server.
 ```
 
