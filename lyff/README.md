@@ -7,9 +7,14 @@ Ng (@PierceNg), based on the original by Dmitry Boyarintsev (@skalogryz).
 
 ### Linux
 
-Tested on Ubuntu 20.04. You need FPC for Linux to compile the web server,
-and FPC for WebAssembly to compile ```lyff.pas```. To set up FPC for
-WebAssembly, see [README at root directory](/README.md).
+Tested on Ubuntu 20.04. The WebAssembly binary ```lyff.wasm``` is already
+included in this repo. Just use a local web server to publish the content
+of ```htdocs``` say by using a Python 1-liner. You could also just compile
+```webserver.lpr``` in this directory and run it.
+
+
+To hack WebAssembly with Pascal, you FPC for WebAssembly. To set up FPC for
+WebAssembly, see [top-level README](/README.md).
 
 Build it:
 
