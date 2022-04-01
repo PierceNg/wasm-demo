@@ -13,7 +13,7 @@ of ```htdocs``` say by using a Python 1-liner. You could also just compile
 ```webserver.lpr``` in this directory and run it.
 
 
-To hack WebAssembly with Pascal, you FPC for WebAssembly. To set up FPC for
+To hack WebAssembly with Pascal, you need FPC for WebAssembly. To set up FPC for
 WebAssembly, see [top-level README](/README.md).
 
 Build it:
