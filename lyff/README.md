@@ -5,7 +5,7 @@ Ng (@PierceNg), based on the original by Dmitry Boyarintsev (@skalogryz).
 
 ## Running
 
-# Linux
+### Linux
 
 Tested on Ubuntu 20.04. You need FPC for Linux to compile the web server,
 and FPC for WebAssembly to compile ```lyff.pas```. To set up FPC for
@@ -36,5 +36,5 @@ Run it:
 
 ```
 Visit localhost:8000 with your web server.
-
+```
 
