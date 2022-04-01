@@ -1,7 +1,10 @@
 # wasm-demo
-Just a demo required for WASM poc
 
-Lyff has been copied and ported to pascal from 
-  https://codelabs.developers.google.com/codelabs/web-assembly-intro/index.html
+This is a reworked demonstration of WebAssembly with Free Pascal by Pierce
+Ng (@PierceNg), based on the original by Dmitry Boyarintsev (@skalogryz).
 
-The purpose is a requirement of FPC support for wasm
+## Setting Up Free Pascal WebAssembly Compiler
+
+See [Free Pascal wiki page](https://wiki.freepascal.org/WebAssembly/Compiler) on setting up the
+FPC WebAssembly compiler.
+
