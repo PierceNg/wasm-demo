@@ -33,8 +33,6 @@ Run it:
 
 ```
 % ./linrun.sh
-
-```
 Visit localhost:8000 with your web server.
 ```
 
