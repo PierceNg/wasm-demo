@@ -6,5 +6,6 @@ set fpcwasmexe=ppcrosswasm32.exe
 
 echo Building...
 "%fpcexe%" webserver.lpr
-"%fpcwasmexe%" -vi -Twasi -olyff.wasm lyff.pas
+"%fpcwasmexe%" -l -vi -Twasi -olyff.wasm lyff.pas
 
+copy lyff.wasm htdocs
