@@ -12,24 +12,24 @@ the original by Dmitry Boyarintsev (@skalogryz).
 
 ## Key Files
 
-- ```lifedriver.pas``` - user interface driver
+- ```lifedriver.lpr``` - user interface driver
 - ```lyff.pas``` - game machine
-- ```webserver.pas``` - convenience web server
+- ```webserver.lpr``` - convenience web server
 
 ## Running
 
 This repo contains the necessary HTML, CSS, Javascript and WebAssembly files to run.
 
-To run, compile ```webserver.pas``` and execute it in this directory;  ```webserver``` will serve
+To run, compile ```webserver.lpr``` and execute it in this directory;  ```webserver``` will serve
 the content in ```htdocs```.  You could also use another web server, say, a Python one-liner.
 
 ## Building
 
 Three compilers are required:
 
-- Free Pascal native compiler for your platform, to compile ```webserver.pas```.
-- pas2js, to compile ```lifedriver.pas```.
-- Free Pascal WebAssembly cross compiler for your platform, to compile ```lyff.wasm```.
+- Free Pascal native compiler for your platform, to compile ```webserver.lpr```.
+- pas2js, to compile ```lifedriver.lpr```.
+- Free Pascal WebAssembly cross compiler for your platform, to compile ```lyff.pas```.
 
 Detailed instructions and convenience scripts, or maybe a build system, to come.
 
