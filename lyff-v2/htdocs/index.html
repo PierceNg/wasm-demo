@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="/css/bulma.min.css"/>
+        <title>WebAssembly with Pascal</title>
+        <script src="lifedriver.js"></script>
+    </head>
+    <body>
+        <section class="hero is-small">
+            <div class="hero-head has-text-centered mt-4">
+                <p class="title">Conway Game of Life</p>
+                <p class="subtitle">with FPC-WebAssembly and pas2js</p>
+            </div>
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <div class="columns is-vcentered is-centered">
+                        <div class="column is-narrow">
+                            <div class="mb-2">
+                                    <button class="button is-primary" id="btnStart">Start</button>
+                                    <button class="button is-primary" id="btnStop" disabled>Stop</button>
+                                    <button class="button is-primary" id="btnClear" disabled>Clear</button>
+                            </div>
+                            <nav class="panel">
+                                <p class="panel-heading">Game Board</p>
+                                <div class="panel-block"><canvas id="canvas"></canvas></div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            rtl.showUncaughtExceptions = true;
+            rtl.run()
+        </script>
+    </body>
+</html>
